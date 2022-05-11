@@ -1,0 +1,22 @@
+@media (min-width: 740px) and (max-width: 1023px) {
+    .contact-form .form-control {
+        padding: 8px 3.8px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+    .contact-form .form-control--full {
+        padding: 8px 6px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+}
+
+@media (max-width: 740px) {
+    #nav >li {
+        display: block;
+    }
+    #header .search-btn {
+        display: none;
+    }
+}
+    

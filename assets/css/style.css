@@ -6,9 +6,11 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* commom */
 .clear {
     clear: both;
 }
@@ -17,6 +19,71 @@ html {
     color: #fff !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    margin-top: 15px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: calc(100% / 3);
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+
+
+/* main */
 #main {
 
 } 
@@ -30,6 +97,7 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 #nav {
@@ -88,16 +156,26 @@ html {
     font-size: 12px;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;
-    cursor: pointer;
 }
 
 #header .search-btn:hover {
     background-color: #f44336;
+    cursor: pointer;
 }
 
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px; 
@@ -137,7 +215,8 @@ html {
 
 #content .content-section{
     width: 800px;
-    padding: 64px 0;
+    max-width: 100%;
+    padding: 64px 16px 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -167,12 +246,6 @@ html {
     margin-top: 48px;
 }
 
-#content .member-item {
-    float: left;
-    width: calc(100% / 3);
-    text-align: center;
-}
-
 #content .member-name {
     font-size: 15px;    
 }
@@ -190,6 +263,7 @@ html {
 }
 
 .tickets-list {
+    width: 100%;
     margin-top: 40px;
     list-style: none;
     background-color: #FFF;
@@ -221,8 +295,98 @@ html {
     margin-top: -3px;
 }
 
+/* Place */
+.places-list {
+    margin-top : 32px ;
+}
 
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff; 
+}   
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575
+}
+
+.place-desc {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+/* contact form */
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px; 
+}
+
+.contact-form .form-control,
+.contact-form .form-control--full {
+    padding: 7.8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+
+/* map section */
+.map-section img{
+    width: 100%;
+}
+
+/* footer section */
 
 #footer {
+    padding: 64px 16px;
+    text-align: center;
+}
 
+#footer .socials-list {
+    font-size: 24px;
+}  
+
+#footer .socials-list a{
+    color: #000;
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copyright{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copyright a{
+    color: rgba(0, 0, 0, 0.6);
 }
