@@ -32,17 +32,21 @@
                 </li>
             </ul>
             <!-- end nav -->
-            
-            <!-- begin : search button -->
-            <div class="search-btn">
-                <i class="search-icon ti-search"></i>
-            </div>
 
+
+            <!-- mobile menu -->
             <div id="mobile-menu" class="mobile-menu-btn">
                 <i class="menu-icon ti-menu"></i>
             </div>
 
-            <!-- end : search button -->
+            
+            <!-- search btn -->
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+
+
+    
         </div>
         <div id="slider">
             <div class="text-content">
@@ -185,12 +189,30 @@
         var mobileMenu = document.getElementById('mobile-menu');
         var headerHeight = header.clientHeight
         
+
+        // đóng mở mobile menu //
         mobileMenu.onclick = function() {
             var isClosed = header.clientHeight === headerHeight ;
             if (isClosed) {
                 header.style.height = 'auto' ; 
             } else {
                 header.style.height = null ;
+            }
+        }
+
+
+        // tự động đóng khi chọn menu//
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i <menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function(event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+                if (isParentMenu) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null ;
+                }
             }
         }
     </script>
