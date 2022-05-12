@@ -48,7 +48,7 @@
 
     #header .search-btn {
         position: absolute;
-        display: none;
+        display: block;
     }
     
 
