@@ -1,17 +1,24 @@
 @media (min-width: 740px) and (max-width: 1023px) {
     .contact-form .form-control {
-        padding: 8px 3.8px;
         border: 1px solid #ccc;
         outline: none;
     }
     .contact-form .form-control--full {
-        padding: 8px 6px;
         border: 1px solid #ccc;
         outline: none;
     }
 }
 
 @media (max-width: 740px) {
+    .s-full-width,
+    .s-col-full {
+        width: 100% !important;
+    }
+
+    .s-mt-8 {
+        margin-top: 8px !important;
+    }
+
     #nav {
         display: block;
     }
@@ -50,7 +57,14 @@
         position: absolute;
         display: none;
     }
-    
+
+    #content .member-img {
+        width: 60%;
+    }
+
+    .contact-form {
+        margin-top: 16px;
+    }
 
 }
     
